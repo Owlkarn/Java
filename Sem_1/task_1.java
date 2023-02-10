@@ -13,10 +13,11 @@ public class task_1 {
                     count++;
                 }
             }
-            if (count != 0) {
-                if (count > 1 && count < 5) {
+            if (count != 0){
+                if (count > 1 && count < 5){
                     System.out.printf("%d встречается %d раза", a[i], count);
-                } else {
+                }
+                else {
                     System.out.printf("%d встречается %d раз", a[i], count);
                 }
                 System.out.println();
