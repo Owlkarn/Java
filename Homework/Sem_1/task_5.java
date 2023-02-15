@@ -67,5 +67,6 @@ public class task_5 {
                 }
             }
         }
+        iScanner.close();
     }
 }
