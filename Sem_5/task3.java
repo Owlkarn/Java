@@ -21,12 +21,19 @@ public class task3 {
             if (hooksDict.containsKey(ch))
                 hooks.add(ch);
             else if (hooksDict.containsValue(ch)) {
-                char hookLast = hooks.removeLast();
-                if (hooksDict.get(hookLast) != ch)
-                return false;
+                if (hooks.size() == 0)
+                    return false;
+                else {
+                    char hookLast = hooks.removeLast();
+                    if (hooksDict.get(hookLast) != ch)
+                        return false;
+                }
             }
         }
-        return true;
+        if (hooks.size() != 0)
+            return false;
+        else
+            return true;
     }
 
     public static void main(String[] args) {
