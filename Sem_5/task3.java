@@ -21,7 +21,7 @@ public class task3 {
             if (hooksDict.containsKey(ch))
                 hooks.add(ch);
             else if (hooksDict.containsValue(ch)) {
-                if (hooks.size() == 0)
+                if (hooks.isEmpty())
                     return false;
                 else {
                     char hookLast = hooks.removeLast();
@@ -30,10 +30,7 @@ public class task3 {
                 }
             }
         }
-        if (hooks.size() != 0)
-            return false;
-        else
-            return true;
+        return hooks.isEmpty();
     }
 
     public static void main(String[] args) {
