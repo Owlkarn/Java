@@ -150,6 +150,7 @@ public class task {
                 filterNotebooks.add(notebook);
             }
         }
+        iScanner.close();
         return filterNotebooks;
     }
 
