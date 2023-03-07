@@ -1,3 +1,20 @@
+// Подумать над структурой класса Ноутбук для магазина техники - выделить поля и методы. Реализовать в java.
+
+// Создать множество ноутбуков.
+
+// Написать метод, который будет запрашивать у пользователя критерий (или критерии) фильтрации и выведет ноутбуки, отвечающие фильтру. 
+// Критерии фильтрации можно хранить в Map. Например:
+
+// “Введите цифру, соответствующую необходимому критерию:
+// 1 - ОЗУ
+// 2 - Объем ЖД
+// 3 - Операционная система
+// 4 - Цвет …
+
+// Далее нужно запросить минимальные значения для указанных критериев - сохранить параметры фильтрации можно также в Map.
+
+// Отфильтровать ноутбуки их первоначального множества и вывести проходящие по условиям.
+
 package Homework.Sem_6;
 
 import java.util.HashMap;
@@ -46,7 +63,7 @@ public class task {
                 }
             }
             System.out.println("В наличии есть ноутбуки со следующими объемами жесткого диска, введите номер минимально необходимого объема:\n"
-             + memories);
+            + memories);
             int filterMemory = iScanner.nextInt();
 
             filter.put("memory", memories.get(filterMemory));
@@ -57,13 +74,13 @@ public class task {
             Map<Integer, Integer> rams = new HashMap<>();
             int i = 1;
             for (Notebook notebook : notebooks) {
-                if (!rams.containsValue(notebook.getMemory())) {
-                    rams.put(i, notebook.getMemory());
+                if (!rams.containsValue(notebook.getRam())) {
+                    rams.put(i, notebook.getRam());
                     i++;
                 }
             }
             System.out.println("В наличии есть ноутбуки со следующими объемами оперативной памяти, введите номер минимально необходимого объема:\n"
-             + rams);
+            + rams);
             int filterRam = iScanner.nextInt();
 
             filter.put("ram", rams.get(filterRam));
@@ -80,7 +97,7 @@ public class task {
                 }
             }
             System.out.println("В наличии есть ноутбуки следующими операционными системами, введите номер необходимой ОС:\n"
-             + oss);
+            + oss);
             int filterOs = iScanner.nextInt();
 
             filter.put("os", oss.get(filterOs));
@@ -97,7 +114,7 @@ public class task {
                 }
             }
             System.out.println("В наличии есть ноутбуки следующих цветов, введите номер необходимого цвета:\n"
-             + colours);
+            + colours);
             int filterColour = iScanner.nextInt();
 
             filter.put("colour", colours.get(filterColour));
@@ -114,7 +131,7 @@ public class task {
                 }
             }
             System.out.println("В наличии есть ноутбуки со следующими процессорами, введите номер необходимого процессора:\n"
-             + procs);
+            + procs);
             int filterProc = iScanner.nextInt();
 
             filter.put("proc", procs.get(filterProc));
@@ -124,12 +141,12 @@ public class task {
         Set<Notebook> filterNotebooks = new HashSet<>();
 
         for (Notebook notebook : notebooks) {
-            if ((notebook.getBreed().equals(filter.get("breed")) || filter.get("breed") == null) &&
-            (notebook.getMemory() >= (int) filter.get("memory") || filter.get("memory") == null) &&
-            (notebook.getRam() >= (int) filter.get("ram") || filter.get("ram") == null) &&
-            (notebook.getOs().equals(filter.get("os")) || filter.get("os") == null) &&
-            (notebook.getColour().equals(filter.get("colour")) || filter.get("colour") == null) &&
-            (notebook.getProc().equals(filter.get("proc")) || filter.get("proc") == null)) {
+            if ((filter.get("breed") == null || notebook.getBreed().equals(filter.get("breed"))) &&
+            ((filter.get("memory") == null) || (notebook.getMemory() >= ((int) filter.get("memory")))) &&
+            (filter.get("ram") == null || (notebook.getRam() >= ((int) filter.get("ram")))) &&
+            (filter.get("os") == null || notebook.getOs().equals(filter.get("os"))) &&
+            (filter.get("colour") == null || notebook.getColour().equals(filter.get("colour"))) &&
+            (filter.get("proc") == null || notebook.getProc().equals(filter.get("proc")))) {
                 filterNotebooks.add(notebook);
             }
         }
