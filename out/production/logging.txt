@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-02-17T03:28:47.749858800Z</date>
+  <millis>1676604527749</millis>
+  <nanos>858800</nanos>
+  <sequence>0</sequence>
+  <logger>Homework.Sem_2.task2</logger>
+  <level>INFO</level>
+  <class>Homework.Sem_2.task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Array 25841</message>
+</record>
+<record>
+  <date>2023-02-17T03:28:47.896089300Z</date>
+  <millis>1676604527896</millis>
+  <nanos>89300</nanos>
+  <sequence>1</sequence>
+  <logger>Homework.Sem_2.task2</logger>
+  <level>INFO</level>
+  <class>Homework.Sem_2.task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Array 25481</message>
+</record>
+<record>
+  <date>2023-02-17T03:28:47.898088900Z</date>
+  <millis>1676604527898</millis>
+  <nanos>88900</nanos>
+  <sequence>2</sequence>
+  <logger>Homework.Sem_2.task2</logger>
+  <level>INFO</level>
+  <class>Homework.Sem_2.task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Array 25418</message>
+</record>
+<record>
+  <date>2023-02-17T03:28:47.900239100Z</date>
+  <millis>1676604527900</millis>
+  <nanos>239100</nanos>
+  <sequence>3</sequence>
+  <logger>Homework.Sem_2.task2</logger>
+  <level>INFO</level>
+  <class>Homework.Sem_2.task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Array 24518</message>
+</record>
+<record>
+  <date>2023-02-17T03:28:47.902091600Z</date>
+  <millis>1676604527902</millis>
+  <nanos>91600</nanos>
+  <sequence>4</sequence>
+  <logger>Homework.Sem_2.task2</logger>
+  <level>INFO</level>
+  <class>Homework.Sem_2.task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Array 24158</message>
+</record>
+<record>
+  <date>2023-02-17T03:28:47.905095500Z</date>
+  <millis>1676604527905</millis>
+  <nanos>95500</nanos>
+  <sequence>5</sequence>
+  <logger>Homework.Sem_2.task2</logger>
+  <level>INFO</level>
+  <class>Homework.Sem_2.task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Array 21458</message>
+</record>
+<record>
+  <date>2023-02-17T03:28:47.906092600Z</date>
+  <millis>1676604527906</millis>
+  <nanos>92600</nanos>
+  <sequence>6</sequence>
+  <logger>Homework.Sem_2.task2</logger>
+  <level>INFO</level>
+  <class>Homework.Sem_2.task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Array 12458</message>
+</record>
+</log>
