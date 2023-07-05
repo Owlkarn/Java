@@ -41,19 +41,27 @@ public class Main {
     }
 
     public static void finalTask() {
+        boolean getCorrectData = false;
         String[] fiot = getArray();
-        if (countCheck(fiot) == -1)
-            System.out.println("Введено больше 4 элементов");
-        else if (countCheck(fiot) == -2)
-            System.out.println("Введено меньше 4 элементов");
-        else {
-            try {
-                fileWriteFioNum(telephoneTypeCheck(fiot), fioTypeCheck(fiot));
-            } catch (WrongTypeException e) {
-                System.out.println(e.getMessage() + " " + e.getNum());
-            } catch (MyFileNotFoundException e) {
-                System.out.println(e.getMessage() + " " + e.getFileName());
-            }
+        while (!getCorrectData) {
+            if (countCheck(fiot) == -1) {
+                System.out.println("Введено больше 4 элементов");
+                fiot = getArray();
+            } else if (countCheck(fiot) == -2) {
+                System.out.println("Введено меньше 4 элементов");
+                fiot = getArray();
+            } else
+                getCorrectData = true;
+        }
+
+        try {
+            fileWriteFioNum(telephoneTypeCheck(fiot), fioTypeCheck(fiot));
+        } catch (WrongTypeException e) {
+            System.out.println(e.getMessage() + " " + e.getNum());
+            finalTask();
+        } catch (MyFileNotFoundException e) {
+            System.out.println(e.getMessage() + " " + e.getFileName());
+            finalTask();
         }
     }
 
